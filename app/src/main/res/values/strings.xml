@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Capital test</string>
+
+    <!-- Headers -->
+    <string name="MainMenuHeader">Capital Test</string>
+    <string name="QuestionsHeader">Choose the correct answer</string>
+
+    <!-- Additional texts -->
+    <string name="prolog">Test consists of 10 questions</string>
+
+    <!-- Button -->
+    <string name="startButton">Start</string>
+    <string name="nextButton">Next</string>
 </resources>
