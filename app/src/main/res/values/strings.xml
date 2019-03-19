@@ -10,5 +10,6 @@
 
     <!-- Button -->
     <string name="startButton">Start</string>
+    <string name="answerButton">Answer</string>
     <string name="nextButton">Next</string>
 </resources>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/startTest2"
+        android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -18,7 +18,8 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_background"
         android:enabled="false"
-        android:text="@string/nextButton"
+        android:onClick="nextClick"
+        android:text="@string/answerButton"
         android:textColor="#fff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,7 +64,7 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="275dp"
-        android:layout_height="113dp"
+        android:layout_height="127dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="36dp"
@@ -77,49 +78,38 @@
         app:layout_constraintTop_toBottomOf="@+id/question"
         app:layout_constraintVertical_bias="0.145">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <RadioButton
+            android:id="@+id/option3"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:onClick="onAnswerChange"
+            android:text="RadioButton" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <RadioButton
+            android:id="@+id/option1"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onAnswerChange"
+            android:text="RadioButton" />
 
-                <RadioButton
-                    android:id="@+id/option1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="RadioButton" />
+        <RadioButton
+            android:id="@+id/option4"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:onClick="onAnswerChange"
+            android:text="RadioButton" />
 
-                <RadioButton
-                    android:id="@+id/option2"
-                    android:layout_width="135dp"
-                    android:layout_height="wrap_content"
-                    android:text="RadioButton" />
-            </TableRow>
+        <RadioButton
+            android:id="@+id/option2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:onClick="onAnswerChange"
+            android:text="RadioButton" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RadioButton
-                    android:id="@+id/option3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:text="RadioButton" />
-
-                <RadioButton
-                    android:id="@+id/option4"
-                    android:layout_width="135dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:text="RadioButton" />
-            </TableRow>
-
-        </TableLayout>
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
