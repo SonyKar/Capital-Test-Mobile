@@ -60,29 +60,34 @@ public class Questions extends AppCompatActivity {
 
     public void nextClick(View v) {
         if (next.getText().equals("Answer")) {
-            MainActivity.points += 2;
             switch (correctNumber) {
                 case "1":
                     option1.setBackgroundColor(getResources().getColor(R.color.success));
+                    if (option1.isChecked()) MainActivity.points += 1;
                     break;
                 case "2":
                     option2.setBackgroundColor(getResources().getColor(R.color.success));
+                    if (option2.isChecked()) MainActivity.points += 1;
                     break;
                 case "3":
                     option3.setBackgroundColor(getResources().getColor(R.color.success));
+                    if (option3.isChecked()) MainActivity.points += 1;
                     break;
                 case "4":
                     option4.setBackgroundColor(getResources().getColor(R.color.success));
+                    if (option4.isChecked()) MainActivity.points += 1;
                     break;
             }
             next.setText(getResources().getText(R.string.nextButton));
         } else {
             MainActivity.questionNumber++;
-            if (MainActivity.questionNumber == 4) {
-//                Intent result = new Intent(getApplicationContext(), );
+            if (MainActivity.questionNumber == MainActivity.questions.length) {
+                Intent result = new Intent(getApplicationContext(), Result.class);
+                startActivity(result);
+            } else {
+                radioGroup.clearCheck();
+                updateData();
             }
-            radioGroup.clearCheck();
-            updateData();
         }
     }
 }

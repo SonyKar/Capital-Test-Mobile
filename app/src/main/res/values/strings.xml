@@ -4,6 +4,7 @@
     <!-- Headers -->
     <string name="MainMenuHeader">Capital Test</string>
     <string name="QuestionsHeader">Choose the correct answer</string>
+    <string name="ResultHeader">Your mark</string>
 
     <!-- Additional texts -->
     <string name="prolog">Test consists of 10 questions</string>
@@ -12,4 +13,5 @@
     <string name="startButton">Start</string>
     <string name="answerButton">Answer</string>
     <string name="nextButton">Next</string>
+    <string name="mainMenuButton">Main Menu</string>
 </resources>
